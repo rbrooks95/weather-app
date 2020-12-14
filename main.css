@@ -5,7 +5,7 @@
 }
 body {
   font-family: 'Lora', serif;
-  background-image: url(weather\ pic/sky3.jpg);
+  background-image: url(weather\ pic/sky4.jpg);
   background-size: cover;
   background-position: top center;
 }
@@ -24,24 +24,7 @@ header {
   padding: 50px, 15px, 15px;
 }
 
-header input {
-  width: 100%;
-  max-width: 280px;
-  padding: 10px 15px;
-  border: none;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 16px 0px 16px 0px;
-  border-bottom: 3px solid #00a0df;
-  color: #313131;
-  font-size: 20px;
-  font-weight: 300;
-  transition: 0.2s ease-out;
-}
 
-header input:focus {
-  background-color: rgba(255, 255, 255, 0.6);
-}
 
 main {
   flex: 1 1 100%;
@@ -52,21 +35,48 @@ main {
   text-align: center;
 }
 
+.main-search {
+  width: 40vw;
+}
+.main-search input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 16px 0px 16px 0px;
+  border-bottom: 3px solid #00a0df;
+  color: #313131;
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: 0.2s ease-out;
+}
+
+.main-search input:focus {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .location .city {
-  color: #fff;
-  font-size: 32px;
+  color: black;
+  font-size: 3rem;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
 .location .date {
-  color: #fff;
-  font-size: 16px;
+  color: black;
+  font-size: 2rem;
 }
 
 .current .temp {
-  color: #fff;
-  font-size: 102px;
+  color: black;
+  font-size: 10rem;
   font-weight: 900;
   margin: 30px 0px;
   /* text-shadow: 2px 10px rgba(0, 0, 0, 0.6); */
@@ -77,18 +87,59 @@ main {
 }
 
 .current .weather {
-  color: #fff;
-  font-size: 32px;
+  color: black;
+  font-size: 5rem;
   font-weight: 700;
   font-style: italic;
   margin-bottom: 15px;
-  text-shadow: rgba(255, 255, 255, 0.4);
+  /* text-shadow: rgba(255, 255, 255, 0.4); */
 }
 
 .current .hi-low {
-  color: #fff;
+  color: black;
   font-family: 'Lora', serif;
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: 500;
-  text-shadow: 0px 4px rgba(255, 255, 255, 0.4);
+  /* text-shadow: 0px 4px rgba(255, 255, 255, 0.4); */
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .current .temp {
+    font-size: 5rem;
+  }
+  .current .weather {
+    font-size: 2rem;
+  }
+
+  .location .date {
+    font-size: 1rem;
+  }
+  .location .city {
+    font-size: 1.5rem;
+  }
+  .main-search input {
+    font-size: 1rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

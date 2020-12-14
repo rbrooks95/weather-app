@@ -6,6 +6,10 @@ const api = {
 const searchbox = document.querySelector('.search-box');
 searchbox.addEventListener('keypress', setQuery);
 
+/** On inital load default call to brooklyn */
+window.addEventListener('load', (event) => {
+    getResults('brooklyn')
+});
 
 function setQuery(evt) {
     if (evt.keyCode == 13) {
@@ -23,7 +27,7 @@ function getResults (query) {
 function displayResults(weather) {
     console.log(weather);
     let city = document.querySelector('.location .city');
-    city.innerText = `${weather.name}, ${weather.sys.country}`; 
+    city.innerText = `${weather.name}, ${weather.sys.country}`;
 
     let now = new Date();
     let date = document.querySelector('.location .date');
@@ -36,7 +40,7 @@ function displayResults(weather) {
     weather_el.innerText = weather.weather[0].main;
 
     let hilow = document.querySelector('.hi-low');
-    hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${weather.main.temp_max}°c / ${Math.round(weather.main.temp_max)}°c`;
+    hilow.innerText = `Low ${Math.round(weather.main.temp_min)}°F / ${weather.main.temp_max}°F / Hi ${Math.round(weather.main.temp_max)}°F`;
 }
 
 
